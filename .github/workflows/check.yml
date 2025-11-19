@@ -24,5 +24,5 @@ jobs:
           releases=$(gh release list --exclude-drafts --exclude-pre-releases -R erlang/otp --limit 3 | cut -f 3)
           for release in $releases
           do
-            git tag "$release" && git push origin "$release" || echo "Tag $release already exists"
+            gh workflow run build.yml -f otp_version="${release#OTP-}"
           done
