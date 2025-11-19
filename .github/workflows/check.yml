@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: taiki-e/checkout-action@v1
+        uses: actions/checkout@v2
 
       - name: Check for now OTP releases
         shell: bash
