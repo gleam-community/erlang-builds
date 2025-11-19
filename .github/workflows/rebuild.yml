@@ -23,6 +23,8 @@ jobs:
             if git rev-parse "$release" -- >/dev/null 2>&1;
             then
               echo "Triggering rebuild of release $release"
+              git tag -f "$release"
+              git push -f origin "$release"
               gh workflow run build.yml -f otp_version="${release#OTP-}"
             else
               echo "Release $release exists, but there is no associated tag for it."
