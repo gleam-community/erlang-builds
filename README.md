@@ -30,14 +30,14 @@ Additionally, the Tarball includes a prebuilt version of [rebar3](https://github
 
 Download the right variant in the latest version from the [Releases](https://github.com/gleam-community/erlang-linux-builds/releases) page. The tarball does not include a top-level directory; this has been done to be compatible with Erlang/OTPs official releases. Once extracted, you will find all the files and directories included in the Erlang installation directory, typically inside `/usr/local/lib/erlang`. You can copy the files there, but you can also directly run the `./bin/erl` program from anywhere to enter an Erlang shell.
 
-```bash
+```sh
 # Download the latest version
 wget $RELEASE_URL
 
 # Create a target directory
 mkdir erlang
 
-# Extract downloaded archive into tht directory
+# Extract downloaded archive into that directory
 tar -xf erlang-*.tar.gz -C erlang/
 
 # Run an Erlang shell!
